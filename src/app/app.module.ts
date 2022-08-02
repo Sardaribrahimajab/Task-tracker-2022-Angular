@@ -11,6 +11,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { AlgoliaComponent } from './components/algolia/algolia.component';
+import { NgAisModule } from 'angular-instantsearch';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     ButtonComponent,
     TasksComponent,
     TaskItemComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    AlgoliaComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgAisModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

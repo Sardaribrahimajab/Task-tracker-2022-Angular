@@ -1,0 +1,17 @@
+<input type="search" name="search" [(ngModel)]="search" (ngModelChange)="searching($event)" id="search" placeholder="search"/>
+<!-- <td>
+    <select (change)="selectOption($event.target.value)"
+    [(ngModel)]="selected">
+         <option style="display:none">select a category</option>
+         <option *ngFor="let item of tasks" [ngValue]="item.id" value="item.category">{{item.id}}</option>
+       </select>
+     </td> -->
+     <div>
+        <select (change)="selectOption($event)"
+        [(ngModel)]="id">
+        <option [value]="item.id" *ngFor="let item of tasks">{{item.id}}</option>
+         </select>
+      </div> 
+      <!-- <ais-refinement-list></ais-refinement-list> -->
+
+ 
